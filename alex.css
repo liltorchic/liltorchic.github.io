@@ -1,0 +1,291 @@
+html, body {
+    height: auto; /* Allow the body to grow with content */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+ }
+
+html {
+    min-height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255); /* For browsers that do not support gradients */
+    background-image: linear-gradient(150deg, rgb(255, 226, 243), rgb(241, 253, 255));
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+li {
+    float: left;
+    font-family: Poppins, sans-serif;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+  }
+
+a.active {
+    background-color: #0a0a0a;
+  }
+  
+.container_h{
+    padding: 2%;
+  }
+
+  /* Create two equal columns that float next to each other */
+.column_50 {
+    float: left;
+    width: 50%;
+    min-height: 400px;
+  }
+
+.column_25 {
+    float: left;
+    
+    width: 23%;
+    min-height: 400px;
+    padding: 1%;
+  }
+
+.fancybox{
+    background-color:rgba(240, 255, 255, 0.4);
+    border:1px solid rgba(240, 255, 255, 0.6);
+    padding: 10%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    min-height: 325px;
+    display: flex;              /* Add this */
+    flex-direction: column;     /* Add this */
+  }
+
+.fancybox .button {
+    margin-top: auto;
+    margin-right: 0;
+    align-self: center; /* Centers the button horizontally */
+    width: auto;
+    min-height: 32px;
+    padding-top: 16px;
+}
+
+.fancybox_h{
+    background-color:rgba(240, 255, 255, 0.4);
+    border:1px solid rgba(240, 255, 255, 0.6);
+    padding-left: 4%;
+    padding-right: 6%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    min-height: 100px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+ }
+
+.fancybox_h-content {
+  flex: 1;
+ }
+
+.fancybox_dl{
+    background-color:rgba(240, 255, 255, 0.4);
+    border:1px solid rgba(240, 255, 255, 0.6);
+    padding-left: 4%;
+    padding-right: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    min-height: 100px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;   /* Center children horizontally */
+    align-items: center;       /* Center children vertically */
+ }
+
+.fancybox_dl-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  padding-top: 24px;
+ }
+
+ .fancybox_cs{
+    background-color:rgba(240, 255, 255, 0.4);
+    border:1px solid rgba(240, 255, 255, 0.6);
+    padding-left: 4%;
+    padding-right: 6%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    min-height: 100px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Noto Sans, sans-serif;
+    font-size: 20px;
+ }
+
+.fancybox_cs-content {
+  flex: 1;
+ }
+
+.fancyimg {
+  padding-right: 24px;
+  margin-right: 24px;
+  max-width: 150px;
+  height: auto;
+  border-radius: 4px;
+ }
+
+.body{
+    padding-left: 8%;
+    padding-right: 8%;
+    font-family: Spline Sans Mono, monospace;
+    font-size: 40px;
+  }
+
+.row {
+    padding: 8%;
+    padding-top: 2%; 
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+.button {
+  display: inline-block;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  transition-duration: 0.4s;
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: Poppins, sans-serif;
+ }
+
+.button-container {
+  text-align: right;
+ }
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+.pdf {
+  width: 90%;
+    min-height: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ table, th, td {
+
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+
+}
+
+table {
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 1200px) {
+
+  .column_50 {
+      width: 100%;
+    }
+
+    .column_25 {
+        width: 100%;
+        min-height: 100px;
+        margin-bottom: 32px;
+    }
+
+      .fancybox{
+        min-height: 165px;
+        padding-top: 4%;
+      }
+
+      .fancybox .button{
+        min-height: 32px;
+        padding-top: 6%;
+      }
+  }
+
+@media screen and (max-width: 800px) {
+  .fancybox_h {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .fancybox_h-content {
+    width: 100%;
+  }
+  .fancybox_cs {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .fancybox_cs-content {
+    width: 100%;
+  }
+  .fancyimg {
+    margin: 0 0 16px 0;
+    padding: 0;
+    max-width: 80vw;
+    height: auto;
+  }
+
+}
+
+
+
