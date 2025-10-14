@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function eraseText() {
+      if( document.getElementById("question").value != ""){
+        document.getElementById("question").value = "";
+	      document.getElementById("img_frog_box").style.visibility = 'visible';
+	      setTimeout(eraseBox, 3000)
+      }
+    }
+
+    function eraseBox() {
+      document.getElementById("img_frog_box").style.visibility = 'hidden';
+    }
+
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="frog.css">
+  <title>What Does A Frog Know</title>
+</head>
+
+<body>
+  <div class="first"></div>
+
+  <div class="second">
+	   <img src="whatdoesafrogknow.png" class="img_frog" alt="Frog" id="frog" width=75% height=75%>
+      <img src="ribit.png" class="img_box" alt="Frog" id="img_frog_box" width=25%>
+   </div>
+
+   <div class="third">
+     <h1 >Ask the frog a question</h1>
+     <textarea class="textarea" id="question" name="w3review" rows="8" cols="50"></textarea>
+     <br><br>
+     <button type="button" onclick="javascript:eraseText();">submit</button>
+     <br><br><br><br><br>
+
+   </div>
+
+   <div class="forth"></div>
+
+</body>
+</html>
