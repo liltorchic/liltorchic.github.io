@@ -49,40 +49,61 @@ a.active {
     padding: 2%;
   }
 
+.row {
+    display: flex; /* equal height of the children */
+    padding: 2% 8% 2% 8%;
+    gap: 2rem; /* ← spacing between boxes */
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
   /* Create two equal columns that float next to each other */
 .column_50 {
-    float: left;
     width: 50%;
     min-height: 400px;
+
   }
 
 .column_25 {
-    float: left;
-    
-    width: 23%;
-    min-height: 400px;
-    padding: 1%;
+  flex: 1; /* additionally, equal width */
+  min-width: 280px;   /* prevents micro-squish */
+  max-width: 1fr;     /* flex smoothness */
+  display: flex;
+  
   }
 
 .fancybox{
     background-color:rgba(240, 255, 255, 0.4);
-    border:1px solid rgba(240, 255, 255, 0.6);
+    border:3px solid rgba(0, 0, 0, 0.6);
     padding: 10%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-family: Poppins, sans-serif;
     font-size: 20px;
-    min-height: 325px;
-    display: flex;              /* Add this */
-    flex-direction: column;     /* Add this */
+    display: flex;
+    flex-direction: column;
+    flex: 1;  
+
+
   }
 
 .fancybox .button {
-    margin-top: auto;
-    margin-right: 0;
-    align-self: center; /* Centers the button horizontally */
-    width: auto;
-    min-height: 32px;
-    padding-top: 16px;
+  white-space: nowrap;
+  margin-top: auto; /* pushes button down */
+  font-size: 25px;
+  border: solid;
+  border-top-color: rgb(97, 97, 97);
+  border-left-color: rgb(97, 97, 97);
+  border-bottom-color: rgb(39, 39, 39);
+  border-right-color: rgb(39, 39, 39);
+   display: flex;
+   align-items: center !important; /* Centers vertically */
+   justify-content: center !important; /* Centers horizontally */
 }
 
 .fancybox_h{
@@ -170,27 +191,17 @@ a.active {
     font-size: 40px;
   }
 
-.row {
-    padding: 8%;
-    padding-top: 2%; 
-  }
-  
-  /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
   
 .button {
   display: inline-block;
   margin-right: 24px;
   margin-bottom: 24px;
-  transition-duration: 0.4s;
+  transition-duration: 0.8s;
   background-color: #333;
   border: none;
   color: white;
-  padding: 12px 30px;
+  padding: 12px 40px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -209,10 +220,11 @@ a.active {
 
 .pdf {
   width: 90%;
-    min-height: 800px;
+    min-height: 1100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 2em;
  }
 
  table, th, td {
@@ -240,28 +252,37 @@ table {
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
 @media screen and (max-width: 1200px) {
 
-  .column_50 {
-      width: 100%;
-    }
-
-    .column_25 {
-        width: 100%;
-        min-height: 100px;
-        margin-bottom: 32px;
-    }
-
-      .fancybox{
-        min-height: 165px;
-        padding-top: 4%;
-      }
-
-      .fancybox .button{
-        min-height: 32px;
-        padding-top: 6%;
-      }
+  .row {
+    flex-direction: column;
   }
 
-@media screen and (max-width: 800px) {
+  .column_50 {
+    width: 100%;
+  }
+
+  .column_25 {
+    width: 100%;
+    flex: none;
+
+  }
+
+  .fancybox{
+    min-height: 165px;
+    padding-top: 4%;
+    padding-bottom: 1%;
+  }
+
+  .fancybox .button {
+    padding: 30px 40px;
+    max-width: 400px;
+    width: auto;
+    align-self: center;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
   .fancybox_h {
     flex-direction: column;
     align-items: center;
