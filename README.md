@@ -1,1 +1,1 @@
-Project for myhuman authored website with custom domain and encryption
+Project for my human authored website with custom domain and encryption
